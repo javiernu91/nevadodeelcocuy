@@ -2,17 +2,23 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  // image: any; //TODO
+  imgSrc: string;
+  imgAlt: string;
+  imgTitle: string;
+  description: string;
+  className?: string;
   title: string;
   body: string;
   date: string;
 }
-
-const { date, title, body } = Astro.props;
+const { className, imgSrc, imgAlt, imgTitle, description, title, body, date } =
+  Astro.props;
 ---
 
 <article class="w-60 h-80 bg-slate-400 rounded-md p-4">
-  <div class="bg-slate-50 w-full h-1/2 rounded-t-md"></div>
+  <!-- <div class="bg-slate-50 w-full h-1/2 rounded-t-md"></div> -->
+  <img src={imgSrc} alt={imgAlt} class="h-1/2 w-full rounded-t-md" />
+
   <!-- <Image src={image} /> -->
   <div class="mt-4">
     <h3 class="font-semibold">{title}</h3>
