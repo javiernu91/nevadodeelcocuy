@@ -1,12 +1,12 @@
 ---
-title: "Descubriendo la Maravilla Escondida: El Nevado de El Cocuy"
-pubDate: 2024-05-07
+title: "¿Cuál es la mejor época para visitar el Nevado de El Cocuy?"
+pubDate: 2024-03-07
 description: "Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza."
-image:
-# layout: "../layouts/Base.astro"
+imgSrc: "../../public/pulpito.jpg"
+imageDescription: "Pulpito del diable nevado de el cocuy"
+# tags: ["astro", "javascript"]
+layout: "../../layouts/Post.astro"
 ---
-
-# **Descubriendo la Maravilla Escondida: El Nevado de El Cocuy**
 
 Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza. Su ubicación remota y enigmática ha despertado la curiosidad de muchos viajeros intrépidos. Ubicado en un rincón privilegiado de Colombia, este tesoro natural esconde uno de los secretos mejor guardados del país.
 

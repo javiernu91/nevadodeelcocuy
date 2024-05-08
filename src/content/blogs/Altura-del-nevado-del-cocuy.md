@@ -1,13 +1,12 @@
 ---
-title: "¿Cuál es la mejor época para visitar el Nevado de El Cocuy?"
-pubDate: 2024-03-07
+title: "¿Cuál es la altura del Nevado de El Cocuy?"
+pubDate: 2024-05-06
 description: "Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza."
-image:
+imgSrc: "../../public/lagunaGrande.jpg"
+imageDescription: "Pulpito del diable nevado de el cocuy"
 # tags: ["astro", "javascript"]
-# layout: "../layouts/Base.astro"
+layout: "../../layouts/Post.astro"
 ---
-
-# **¿Cuál es la mejor época para visitar el Nevado de El Cocuy?**
 
 Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza. Su ubicación remota y enigmática ha despertado la curiosidad de muchos viajeros intrépidos. Ubicado en un rincón privilegiado de Colombia, este tesoro natural esconde uno de los secretos mejor guardados del país.
 

@@ -1,13 +1,11 @@
 ---
-title: "¿Cuál es la altura del Nevado de El Cocuy?"
-pubDate: 2024-05-06
+title: "Descubriendo la Maravilla Escondida: El Nevado de El Cocuy"
+pubDate: 2024-05-07
+imageDescription: "Pulpito del diable nevado de el cocuy"
 description: "Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza."
-image:
-# tags: ["astro", "javascript"]
-# layout: "../layouts/Base.astro"
+imgSrc: "../../src/images/pulpito2.jpg"
+layout: "../../layouts/Post.astro"
 ---
-
-# **¿Cuál es la altura del Nevado de El Cocuy?**
 
 Las majestuosas montañas se alzan imponentes, desafiando el cielo y cautivando los corazones de los amantes de la naturaleza. Su ubicación remota y enigmática ha despertado la curiosidad de muchos viajeros intrépidos. Ubicado en un rincón privilegiado de Colombia, este tesoro natural esconde uno de los secretos mejor guardados del país.
 

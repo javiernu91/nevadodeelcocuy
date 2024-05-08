@@ -7,6 +7,8 @@ import { getCollection } from "astro:content";
 const blogPosts = (await getCollection("blogs")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+console.log(blogPosts);
+console.log(`La url de la imagen: ${blogPosts.data}`);
 ---
 
 <Layout title="Blog...">
@@ -19,7 +21,7 @@ const blogPosts = (await getCollection("blogs")).sort(
       {
         blogPosts.map((blogPost) => (
           <Card
-            imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
+            imgSrc={blogPost.data.imgSrc}
             imgAlt="Foto del nevado de el cocuy"
             title={blogPost.data.title}
             body={blogPost.data.body}
