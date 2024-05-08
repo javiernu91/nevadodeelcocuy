@@ -1,0 +1,64 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import { isTemplateHead } from "typescript";
+import { getCollection } from "astro:content";
+
+const blogPosts = (await getCollection("blogs")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+console.log("helloy");
+console.log(blogPosts);
+---
+
+<Layout title="Blog...">
+  <Header />
+  <main>
+    <h1 class="text-l">
+      Welcome to <span class="text-gradient">PNN El Cocuy Blog</span>
+    </h1>
+    <ul role="list" class="link-card-grid">
+      {
+        blogPosts.map((blogPost) => (
+          <Card
+            imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
+            imgAlt="Foto del nevado de el cocuy"
+            title={blogPost.data.title}
+            body={blogPost.data.body}
+            date={blogPost.data.pubDate}
+            href={blogPost.data.slug}
+          />
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<h3>Blog...</h3>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>

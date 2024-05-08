@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+
+const allPosts = await Astro.glob("../content/blogs/*.md");
 ---
 
 <Layout title="Welcome to PNN El Cocuy.">
@@ -18,22 +20,17 @@ import Hero from "../components/Hero.astro";
     />
 
     <ul role="list" class="link-card-grid">
-      <Card
-        imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
-        imgAlt="Foto del nevado de el cocuy"
-        title="Nevado de el Cocuy"
-        body="Conoce la historia de las montañas del nevado de el Cocuy"
-        date="2024-05-03"
-        href="/posts/post1"
-      />
-      <Card
-        imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
-        imgAlt="Foto del nevado de el cocuy"
-        title="Nevado de el Cocuy"
-        body="Conoce la historia de las montañas del nevado de el Cocuy"
-        date="2024-05-03"
-        href="/posts/post2"
-      />
+      {
+        allPosts.map((item) => (
+          <Card
+            imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
+            imgAlt="Foto del nevado de el cocuy"
+            title={item?.frontmatter.title}
+            body={item?.frontmatter.description}
+            date={item?.frontmatter.pubDate}
+          />
+        ))
+      }
     </ul>
   </main>
 </Layout>

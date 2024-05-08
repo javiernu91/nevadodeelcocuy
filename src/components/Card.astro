@@ -1,4 +1,5 @@
 ---
+import type { SlotString } from "astro/runtime/server/render/slot.js";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -8,15 +9,15 @@ interface Props {
   className?: string;
   title: string;
   body: string;
-  date: string;
-  href: string;
+  date: string | number;
+  slug: string;
 }
-const { className, imgSrc, imgAlt, description, title, body, date, href } =
+const { className, imgSrc, imgAlt, description, title, body, date, slug } =
   Astro.props;
 ---
 
 <article class="w-60 h-80 bg-slate-400 rounded-md p-4">
-  <a href={href}>
+  <a href={`/blog/${slug}`}>
     <!-- <div class="bg-slate-50 w-full h-1/2 rounded-t-md"></div> -->
     <img src={imgSrc} alt={imgAlt} class="h-1/2 w-full rounded-t-md" />
 
