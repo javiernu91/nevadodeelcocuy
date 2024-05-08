@@ -1,0 +1,18 @@
+---
+const {
+  content: { title, pubDate, imgSrc, imageDescription },
+} = Astro.props;
+---
+
+<main class="w-full">
+  <section class="max-w-4xl mx-auto my-0">
+    <h2 class="text-3xl font-bold sm:text-4xl">{title}</h2>
+    <span>{pubDate}</span>
+    <div>
+      <img src={imgSrc} alt={imageDescription} class="w-full object-cover" />
+    </div>
+    <>
+      <slot />
+    </>
+  </section>
+</main>
