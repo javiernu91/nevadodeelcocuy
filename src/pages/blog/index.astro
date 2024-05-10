@@ -13,11 +13,14 @@ console.log(`La url de la imagen: ${blogPosts.data}`);
 
 <Layout title="Blog...">
   <Header />
-  <main>
+  <main class="w-4xl max-w-4xl mx-auto flex-wrap">
     <h1 class="text-l">
       Welcome to <span class="text-gradient">PNN El Cocuy Blog</span>
     </h1>
-    <ul role="list" class="link-card-grid flex gap-8 mt-12">
+    <ul
+      role="list"
+      class="flex flex-wrap justify-center w-full mt-8 mx-auto gap-8"
+    >
       {
         blogPosts.map((blogPost) => (
           <Card
@@ -40,8 +43,6 @@ console.log(`La url de la imagen: ${blogPosts.data}`);
   main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
     color: white;
     font-size: 20px;
     line-height: 1.6;

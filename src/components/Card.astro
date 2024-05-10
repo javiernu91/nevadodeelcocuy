@@ -16,16 +16,16 @@ const { className, imgSrc, imgAlt, description, title, body, date, slug } =
   Astro.props;
 ---
 
-<article class="w-60 h-80 bg-slate-400 rounded-md p-4">
+<article class="max-w-60 h-80 bg-slate-800 rounded-md p-4 min-w-52 flex">
   <a href={`/blog/${slug}`}>
     <!-- <div class="bg-slate-50 w-full h-1/2 rounded-t-md"></div> -->
     <img src={imgSrc} alt={imgAlt} class="h-1/2 w-full rounded-t-md" />
 
     <!-- <Image src={image} /> -->
     <div class="mt-4">
-      <h3 class="font-semibold">{title}</h3>
-      <p class="text-base">{body}</p>
-      <span class="text-sm font-thin">{date}</span>
+      <h3 class="font-semibold text-sm text-pretty">{title}</h3>
+      <p class="text-sm">{description}</p>
+      <span class="font-thin text-xs">{date}</span>
     </div>
   </a>
 </article>
