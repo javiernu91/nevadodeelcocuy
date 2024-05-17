@@ -1,22 +1,38 @@
 ---
-
+import Button from "./Button";
 ---
 
-<header class="flex w-full max-w-4xl mx-auto h-12 font-xl items-center">
-  <nav class="flex w-full justify-between text-gray-50 p-2">
-    <div>Blog del nevado</div>
-    <ul class="flex justify-around gap-4">
+<header
+  class="flex w-full max-w-6xl mx-auto h-20 font-medium text-base items-center text-lightText bg-lightBg dark:bg-darkBg dark:text-darkText"
+>
+  <div
+    class="flex items-center justify-center h-auto max-w-20 px-2 cursor-pointer"
+  >
+    <img
+      class="w-full h-full object-cover"
+      src="../../public/logo.png"
+      alt=""
+    />
+  </div>
+  <nav
+    class="flex w-full p-2 justify-end dark:text-gray-50 dark:bg-neutral-950 gap-16"
+  >
+    <ul class="flex justify-around gap-8">
       <li><a href="/">Home</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li>Hoteles</li>
+      <!-- <li>Hoteles</li>
       <li>Restaurantes</li>
-      <li>Contacto</li>
+      <li>Contacto</li> -->
     </ul>
+    <!-- <Button /> -->
   </nav>
 </header>
 
 <style>
   ul > li {
+    display: flex;
     cursor: pointer;
+    align-items: center;
+    text-align: center;
   }
 </style>
