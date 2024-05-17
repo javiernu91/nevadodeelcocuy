@@ -1,36 +1,73 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-const allPosts = await Astro.glob("../content/blogs/*.md");
 ---
 
 <Layout title="Welcome to PNN El Cocuy.">
   <Header />
-  <main>
+  <main
+    class="dark:bg-darkBg bg-lightBg text-lightText dark:text-darkText max-w-4xl"
+  >
     <!-- <h1 class="text-l">
       Welcome to <span class="text-gradient">PNN El Cocuy Blog</span>
     </h1> -->
+    <h1 class="font-semibold text-7xl text-center py-14 text-balance">
+      Descubre la magia del nevado de El Cocuy
+    </h1>
     <Hero
-      imgSrc="src/images/El Pulpito del diablo.jpg"
-      imgAlt="Foto del nevado de el cocuy"
-      title="La Historia del PNN El Cocuy"
+      imgSrc="../../src/images/lagunaGrande.jpg"
+      title="Descubre la magia del nevado de El Cocuy"
     />
 
-    <ul role="list" class="link-card-grid">
-      {
-        allPosts.map((item) => (
-          <Card
-            imgSrc="src/images/Pulpito-del-Diablo-El-Cocuy.jpg"
-            imgAlt="Foto del nevado de el cocuy"
-            title={item?.frontmatter.title}
-            body={item?.frontmatter.description}
-            date={item?.frontmatter.pubDate}
-          />
-        ))
-      }
+    <h2 class="font-semibold text-2xl pb-4 text-lightText dark:text-darkText">
+      Descubre la Magia del Nevado de El Cocuy
+    </h2>
+    <p
+      class="font-normal text-lg py-2 text-lightText dark:text-darkText text-pretty"
+    >
+      Bienvenido a "Descubre la Magia del Nevado de El Cocuy", tu portal
+      definitivo para explorar uno de los tesoros naturales más impresionantes
+      de Colombia. Este blog está dedicado a aventureros, amantes de la
+      naturaleza y curiosos que desean sumergirse en la belleza y los misterios
+      del Parque Nacional Natural El Cocuy.
+    </p>
+
+    <ul
+      class="font-normal text-lg py-4 text-lightText dark:text-darkText text-pretty"
+    >
+      Aquí encontrarás:
+      <li>
+        <span>Guías de Senderismo Detalladas:</span> Descubre las mejores rutas y
+        senderos, desde caminatas fáciles hasta desafiantes ascensos, con consejos
+        prácticos para todos los niveles de experiencia.
+      </li>
+      <li>
+        <span>Flora y Fauna:</span> Aprende sobre las especies únicas que habitan
+        en este paraíso andino, incluyendo el majestuoso frailejón y el cóndor de
+        los Andes.
+      </li>
+      <li>
+        <span>Historias y Leyendas Locales:</span> Sumérgete en las fascinantes historias
+        y mitos que rodean el nevado, contadas por los habitantes locales.
+      </li>
+      <li>
+        <span>Consejos de Viaje:</span>Obtén recomendaciones sobre alojamiento,
+        equipamiento esencial, y la mejor época del año para visitar.
+      </li>
     </ul>
+
+    <p
+      class="font-normal text-lg py-2 text-lightText dark:text-darkText text-pretty"
+    >
+      Nuestro objetivo es inspirarte y proporcionarte toda la información que
+      necesitas para vivir una experiencia inolvidable en uno de los lugares más
+      espectaculares de Colombia. Ya sea que estés planeando tu primera visita o
+      seas un explorador experimentado, "Descubre la Magia del Nevado de El
+      Cocuy" es tu guía confiable para todas tus aventuras en la montaña. Únete
+      a nuestra comunidad de exploradores y comparte tu propia magia del Nevado
+      de El Cocuy. ¡Embárcate en esta aventura con nosotros!
+    </p>
   </main>
 </Layout>
 
@@ -38,60 +75,19 @@ const allPosts = await Astro.glob("../content/blogs/*.md");
   main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
+
+    /* color: white; */
     font-size: 20px;
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
+
+  ul > li {
+    padding-top: 0.5rem;
+    list-style: disc;
+    margin-left: 2.5rem;
   }
-  h1 {
-    font-size: 3rem;
+
+  span {
     font-weight: 600;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1.2rem;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
   }
 </style>
