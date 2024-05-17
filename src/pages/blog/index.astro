@@ -3,6 +3,7 @@ import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro";
 import { getCollection } from "astro:content";
+import Footer from "../../components/Footer.astro";
 
 const blogPosts = (await getCollection("blogs")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -36,7 +37,7 @@ const blogPosts = (await getCollection("blogs")).sort(
   </main>
 </Layout>
 
-<h3>Blog...</h3>
+<Footer />
 
 <style>
   main {
