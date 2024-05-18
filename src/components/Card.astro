@@ -8,6 +8,9 @@ interface Props {
   slug: string;
 }
 const { imgSrc, imgAlt, description, title, date, slug } = Astro.props;
+
+const event = new Date(date);
+const time = event.toDateString();
 ---
 
 <article
@@ -31,8 +34,9 @@ const { imgSrc, imgAlt, description, title, date, slug } = Astro.props;
         </p>
       </div>
 
-      <span class="font-thin text-xs text-lightText dark:text-darkText"
-        >{date}</span
+      <time
+        datetime={time}
+        class="font-thin text-xs text-lightText dark:text-darkText">{time}</time
       >
     </div>
   </a>
