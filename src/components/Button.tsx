@@ -1,15 +1,15 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-export default function App() {
-  const [theme, setTheme] = useState('light')
+// export default function App() {
+//   const [theme, setTheme] = useState('light')
 
-  function handleTheme() {
-    console.log('theme')
-  }
+//   function handleTheme() {
+//     console.log('theme')
+//   }
 
-  return (
-    <button className="bg-neutral-100 p-4" onClick={handleTheme}>
-      {theme}
-    </button>
-  )
-}
+//   return (
+//     <button className="bg-neutral-100 p-4" onClick={handleTheme}>
+//       {theme}
+//     </button>
+//   )
+// }
