@@ -1,21 +1,21 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-  <BaseHead
-    title="Nevado de El Cocuy"
-    description="¡Descubre la majestuosidad natural del Nevado del Cocuy en Colombia! Sumérgete en un paraíso de picos nevados, lagunas cristalinas y una biodiversidad única. Conoce nuestras rutas de senderismo, escalada en hielo y contempla vistas panorámicas que te dejarán sin aliento. Planifica tu próxima aventura en este icónico destino de montaña y déjate cautivar por la belleza incomparable de la cordillera de los Andes colombianos."
-  />
-  <body
-    class="bg-slate-900 text-gray-100 flex-block max-w-4xl md:pd-8 mx-auto mt-4 text-pretty text-lg"
-  >
+  <BaseHead title={title} description={description} />
+  <Header />
+  <body class="bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText">
     <slot />
+    <Footer />
   </body>
 </html>
