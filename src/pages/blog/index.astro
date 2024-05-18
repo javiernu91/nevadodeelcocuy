@@ -11,15 +11,17 @@ const blogPosts = (await getCollection("blogs")).sort(
 // console.log(blogPosts);
 ---
 
-<Layout title="Blog...">
+<Layout title="Blog El Cocuy">
   <Header />
   <main class="w-4xl max-w-4xl mx-auto flex-wrap">
-    <h1 class="text-l">
-      Welcome to <span class="text-gradient">PNN El Cocuy Blog</span>
+    <h1
+      class="font-semibold text-5xl text-center pb-8 text-balance text-lightText dark:text-lightText"
+    >
+      Bienvenido al blog del <span class="">Nevado de El Cocuy</span>
     </h1>
     <ul
       role="list"
-      class="flex flex-wrap justify-center w-full mt-8 mx-auto gap-8"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center w-full mx-auto gap-8"
     >
       {
         blogPosts.map((blogPost) => (
@@ -46,13 +48,6 @@ const blogPosts = (await getCollection("blogs")).sort(
     color: white;
     font-size: 20px;
     line-height: 1.6;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1.2rem;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
